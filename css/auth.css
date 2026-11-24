@@ -1,0 +1,111 @@
+.auth-dialog {
+  width: min(24rem, 92vw);
+  margin: auto; /* без цього * { margin: 0 } притискає вікно до кута */
+  padding: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.auth-dialog::backdrop { background: rgba(44, 62, 80, 0.6); }
+
+.auth-dialog .auth-form {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.auth-dialog .auth-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #3498db;
+}
+
+.auth-dialog .auth-head h2 { font-size: 1.3rem; color: #2c3e50; }
+
+.auth-dialog .auth-close {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #2c3e50;
+  cursor: pointer;
+}
+.auth-dialog .auth-close:hover { background: #ecf0f1; }
+
+.auth-dialog .auth-field label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.auth-dialog .auth-field input {
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.auth-dialog .auth-field input:focus { border-color: #3498db; }
+.auth-dialog .auth-field input[aria-invalid="true"] { border-color: #c0392b; }
+
+.auth-dialog .auth-pass { display: flex; gap: 0.5rem; }
+.auth-dialog .auth-pass input { flex: 1; min-width: 0; }
+
+.auth-dialog .auth-toggle {
+  flex: none;
+  padding: 0 0.75rem;
+  font: inherit;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+.auth-dialog .auth-toggle:hover { background: #ecf0f1; }
+
+.auth-dialog .auth-error {
+  min-height: 1.1rem;
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #c0392b;
+}
+
+.auth-dialog .auth-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.auth-dialog .auth-submit {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  background: #2c3e50;
+  color: #fff;
+  cursor: pointer;
+}
+.auth-dialog .auth-submit:hover { background: #34495e; }
+
+.auth-dialog .auth-status {
+  min-height: 1.1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.auth-dialog .auth-status--ok { color: #1b6e3c; }
+
+.auth-dialog :focus-visible { outline: 2px solid #3498db; outline-offset: 2px; }
